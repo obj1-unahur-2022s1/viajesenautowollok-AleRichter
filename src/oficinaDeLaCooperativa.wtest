@@ -1,0 +1,29 @@
+import clientes.*
+import remiseras.*
+import cooperativas.*
+
+//"----------------------Comienzo de test de cooperativa-----------------------"
+
+test "test1: Remisera de primera opción es Roxana y segunda opción es Juana para Ana Maria 10Km." {
+	
+	oficina.asignarRemiseras(roxana, juana)
+	
+    assert.equals(juana, oficina.remiseraElegidaParaViaje(anaMaria, 10)) 
+
+}
+
+test "test2: Remisera de primera opción es Roxana y segunda opción es Juana para Teresa Maria 10Km." {
+	
+	oficina.asignarRemiseras(roxana, juana)
+	
+    assert.equals(roxana, oficina.remiseraElegidaParaViaje(teresa, 10)) 
+
+}
+
+test "test3: Remisera de primera opción es Roxana y segunda opción es Juana para Teresa Maria 4Km." {
+	
+	oficina.asignarRemiseras(roxana, juana)
+	
+    assert.equals(roxana, oficina.remiseraElegidaParaViaje(teresa, 4)) 
+
+}
