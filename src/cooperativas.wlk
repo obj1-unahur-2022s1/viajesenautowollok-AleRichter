@@ -35,10 +35,11 @@ object oficina {
 	}
     
     method intercambiarRemiseras(){
-       var guardarDatoPrimerRemisera = self.primeraRemisera()
-       
-       self.cambiarPrimerRemiserarPor(self.segundaRemisera())
-       self.cambiarSegundoRemiseraPor(guardarDatoPrimerRemisera)
+    	/*
+    	 * Aca convenia llamar a asignarRemiseras
+    	 */
+    	self.asignarRemiseras(primeraRemisera, segundaRemisera)
+
     }
     
     method remiseraElegidaParaViaje(cliente, kms){

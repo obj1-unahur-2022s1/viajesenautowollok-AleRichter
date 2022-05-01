@@ -1,3 +1,6 @@
+/*
+ * Remiseras: Muy bien, solo quite el abs() que era innecesario
+ */
 import clientes.*
 
 object roxana {
@@ -8,7 +11,7 @@ object roxana {
 
 object gabriela {
 	method precioViaje(cliente, kilometros){
-		return ((cliente.precioPorKilometro() * 1.20) * kilometros).abs() 
+		return ((cliente.precioPorKilometro() * 1.20) * kilometros) 
 	}
 }
 
