@@ -1,14 +1,21 @@
+/*
+ * Clientes: Muy bien. Revisar los comentarios
+ */
+
 object ludmila {
-	var precioPorKilometro = 18
+	/*
+	 * Como no varia, lo idea es definirlo como constante
+	 * También te modifiqué el método para que veas otra forma de hacerlo
+	 */
+	const precioPorKilometro = 18
 	
-	method precioPorKilometro(){
-		return precioPorKilometro
-	}
+	method precioPorKilometro() = precioPorKilometro
 }
 
 
 object anaMaria {
 	var economiaEstable = true
+	/* Me encanto esta inicialización */
 	var precioPorKilometro = self.precioPorKilometro()
 	 
 	method economiaEstable(valor){
@@ -19,14 +26,8 @@ object anaMaria {
 		return economiaEstable
 	}
 	
-	
-	method precioPorKilometro(){
-		if (self.economiaEstable()){
-			return 30
-		} else {
-			return 25
-		}
-	}		
+	/*Te dejo otra forma de escribir lo mismo */
+	method precioPorKilometro() = if (self.economiaEstable()){30}else{25}	
 }
 
 
@@ -44,11 +45,11 @@ object teresa {
 
 object melina {
 	var clienteActual = null
+	/*No hace falta que se acuerde de ete atributo */
 	var precioPorKilometro = 0
 	
 	method clienteActual(cliente){
-		clienteActual = cliente
-		precioPorKilometro = self.clienteActual().precioPorKilometro() - 3
+		clienteActual = cliente 
 	}
 	
 	method clienteActual(){
@@ -56,7 +57,7 @@ object melina {
 	}
 	
 	method precioPorKilometro(){
-	    return precioPorKilometro
+	    return self.clienteActual().precioPorKilometro() - 3
 	}	
 
 }

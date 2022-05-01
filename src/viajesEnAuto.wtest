@@ -1,3 +1,6 @@
+/*
+ * Muy bien: es una buena decisión hacer test para cada cliente y remiera
+ */
 import clientes.*
 import remiseras.*
 
