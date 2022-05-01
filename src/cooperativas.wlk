@@ -38,7 +38,7 @@ object oficina {
     	/*
     	 * Aca convenia llamar a asignarRemiseras
     	 */
-    	self.asignarRemiseras(primeraRemisera, segundaRemisera)
+    	self.asignarRemiseras(segundaRemisera, primeraRemisera)
 
     }
     
